@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests">
+
+    <test verbose="2" preserve-order="true" name="test-on-chrome">
+      <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="parellelteasting.TestWebApplication">
+            <methods><include name="setUp"/><include name="verifyTitle"/>
+                <include name="tearDown"/></methods>
+        </class></classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="test-on-edge">
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="parellelteasting.TestWebApplication">
+                <methods><include name="setUp"/><include name="verifyTitle"/>
+                    <include name="tearDown"/></methods>
+            </class></classes>
+    </test>
+
+</suite>
